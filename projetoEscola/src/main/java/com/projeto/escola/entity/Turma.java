@@ -1,4 +1,4 @@
-package com.projeto.escola.entity;
+package com.escola.projeto1.entity;
 
 import java.util.Date;
 
@@ -18,7 +18,20 @@ import com.fasterxml.jackson.ObjectIdGenerators;
 
 
 @Entity
-@Table(name = "turma")
+@Table(name = "turma") //nome da tabela no db
 public class Turma {
+@Id //id da entidade será gerado automaticamente 
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "id_turma")
+private Interger idTurma;
+
+//atributos para armazenar características das turmas
+@Column(name = "horario")
+private Date horarioTurma;
+
+@Column(name = "duracao")
+private Integer duracaoTurma;
+
+// Getters e setters para os atributos da turma
 
 }
